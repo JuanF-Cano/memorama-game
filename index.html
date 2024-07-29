@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memorama</title>
+  <link rel="icon" href="./Images/icon.png"/>
+  <link rel="stylesheet" href="./css/card_comparator_logic.css"/>
+  <link rel="stylesheet" href="./css/randomness.css"/>
+  <link rel="stylesheet" href="./css/start.css"/>
+  <link rel="stylesheet" href="./css/animation.css"/>
+  <link rel="stylesheet" href="./css/notifications.css"/>
+  <link rel="stylesheet" href="./css/responsive.css"/>
+  <link rel="stylesheet" href="./css/header.css">
+</head>
+<body>
+  <header>
+    <h1>Memory Symbol</h1>
+    <a href="index.html"><button>Start again</button></a>
+  </header>
+
+
+  <main>
+    <input type="checkbox" id="card1" />
+    <input type="checkbox" id="card2" />
+    <input type="checkbox" id="card3" />
+    <input type="checkbox" id="card4" />
+    <input type="checkbox" id="card5" />
+    <input type="checkbox" id="card6" />
+    <input type="checkbox" id="card7" />
+    <input type="checkbox" id="card8" />
+    <input type="checkbox" id="card9" />
+    <input type="checkbox" id="card10" />
+    <input type="checkbox" id="card11" />
+    <input type="checkbox" id="card12" />
+    <input type="checkbox" id="card13" />
+    <input type="checkbox" id="card14" />
+    <input type="checkbox" id="card15" />
+    <input type="checkbox" id="card16" />
+
+    <input type="checkbox" id="check" class="input-checkbox">
+    <label for="check" class="button-container">
+      Iniciar
+    </label>
+
+    <div class="overlay"></div>
+
+    <div class="error-notification">
+      <div class="notification-content">Turn the wrong cards</div>
+    </div>
+
+    <div class="you-win">
+      <p>¡You win! Click to play again.</p>
+      <button class="you-win-button ">
+        <a href="./index.html" target="_parent">Start Again</a>
+      </button>
+    </div>
+
+    <div class="boxes">
+      <label for="card1" class="card selector1">
+        <div class="card-inner">
+          <div class="Cardfront"></div>
+          <div class="Cardback">
+            <img src="./Images/img1.svg" alt="Logo de css" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card2" class="card selector2">
+        <div class="card-inner">
+          <div class="Cardfront"></div>
+          <div class="Cardback">
+            <img src="./Images/img1.svg" alt="Logo de css" />
+          </div>
+        </div>
+      </label>
+
+    
+
+      <label for="card3" class="card selector3">
+        <div class="card-inner">
+          <div class="Cardfront"></div>
+          <div class="Cardback">
+            <img src="./Images/img2.svg" alt="Logo de JS" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card4" class="card selector4">
+        <div class="card-inner">
+          <div class="Cardfront"></div>
+          <div class="Cardback">
+            <img src="./Images/img2.svg" alt="Logo de JS" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card5" class="card selector5">
+        <div class="card-inner">
+          <div class="Cardfront"></div>
+          <div class="Cardback">
+            <img src="./Images/img3.svg" alt="Logo de Python" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card6" class="card selector6">
+        <div class="card-inner">
+          <div class="Cardfront"></div>
+          <div class="Cardback">
+            <img src="./Images/img3.svg" alt="Logo de Python" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card7" class="card selector7">
+        <div class="card-inner">
+          <div class="Cardfront"></div>
+          <div class="Cardback">
+            <img src="./Images/img4.svg" alt="Logo de TS" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card8" class="card selector8">
+        <div class="card-inner">
+          <div class="Cardfront"></div>
+          <div class="Cardback">
+            <img src="./Images/img4.svg" alt="Logo de TS" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card9" class="card selector9">
+        <div class="card-inner">
+          <div class="Cardfront"></div>
+          <div class="Cardback">
+            <img src="./Images/img5.svg" alt="Logo de Visual Studio" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card10" class="card selector10">
+        <div class="card-inner">
+          <div class="Cardfront"></div>
+          <div class="Cardback">
+            <img src="./Images/img5.svg" alt="Logo de Visual Studio" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card11" class="card selector11">
+        <div class="card-inner">
+          <div class="Cardfront"></div>
+          <div class="Cardback">
+            <img src="./Images/img6.svg" alt="Logo de Discord" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card12" class="card selector12">
+        <div class="card-inner">
+          <div class="Cardfront"></div>
+          <div class="Cardback">
+            <img src="./Images/img6.svg" alt="Logo de Discord" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card13" class="card selector13">
+        <div class="card-inner">
+          <div class="Cardfront"></div>
+          <div class="Cardback">
+            <img src="./Images/img7.svg" alt="Logo de GitHub" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card14" class="card selector14">
+        <div class="card-inner">
+          <div class="Cardfront"></div>
+          <div class="Cardback">
+            <img src="./Images/img7.svg" alt="Logo de GitHub" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card15" class="card selector15">
+        <div class="card-inner">
+          <div class="Cardfront"></div>
+          <div class="Cardback">
+            <img src="./Images/img8.svg" alt="Logo de HTML5" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card16" class="card selector16">
+        <div class="card-inner">
+          <div class="Cardfront"></div>
+          <div class="Cardback">
+            <img src="./Images/img8.svg" alt="Logo de HTML5" />
+          </div>
+        </div>
+      </label>
+
+
+    </div>
+  </main>
+</body>
+
+</html>

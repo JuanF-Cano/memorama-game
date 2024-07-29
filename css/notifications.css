@@ -1,0 +1,354 @@
+@import url("settings.css");
+
+.error-notification {
+  display: none;
+  position: relative;
+  width: 100vw;
+  top: 15%;
+  justify-content: center;
+  z-index: 10000;
+}
+
+@media screen and (max-width: 600px) {
+  .error-notification {
+    width: 120vw;
+    height: auto;
+  }
+}
+
+@media (min-width: 1100px) {
+  .notification-content {
+    height: 100px;
+    display: flex;
+    align-items: center;
+  } 
+}
+
+.notification-content {
+  padding: 4vw;
+  border-radius: 20px;
+
+  justify-content: center;
+  box-sizing: border-box;
+  display: inherit;
+  position: absolute;
+
+  backdrop-filter: blur(0.85rem); /* da un efecto borroso al fondo */
+	/* -webkit-backdrop-filter: blur(0.85rem); */
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid var(--mainColor);
+}
+
+/* Diferent cards selectd*/
+
+/* card1 */
+#card1:checked~#card2:not(:checked)~#card3:checked~#card4:not(:checked)~.error-notification,
+#card1:checked~#card2:not(:checked)~#card3:not(:checked)~#card4:checked~.error-notification,
+#card1:checked~#card2:not(:checked)~#card5:checked~#card6:not(:checked)~.error-notification,
+#card1:checked~#card2:not(:checked)~#card5:not(:checked)~#card6:checked~.error-notification,
+#card1:checked~#card2:not(:checked)~#card7:checked~#card8:not(:checked)~.error-notification,
+#card1:checked~#card2:not(:checked)~#card7:not(:checked)~#card8:checked~.error-notification,
+#card1:checked~#card2:not(:checked)~#card9:checked~#card10:not(:checked)~.error-notification,
+#card1:checked~#card2:not(:checked)~#card9:not(:checked)~#card10:checked~.error-notification,
+#card1:checked~#card2:not(:checked)~#card11:checked~#card12:not(:checked)~.error-notification,
+#card1:checked~#card2:not(:checked)~#card11:not(:checked)~#card12:checked~.error-notification,
+#card1:checked~#card2:not(:checked)~#card13:checked~#card14:not(:checked)~.error-notification,
+#card1:checked~#card2:not(:checked)~#card13:not(:checked)~#card14:checked~.error-notification,
+#card1:checked~#card2:not(:checked)~#card15:checked~#card16:not(:checked)~.error-notification,
+#card1:checked~#card2:not(:checked)~#card15:not(:checked)~#card16:checked~.error-notification,
+
+/* card2 */
+#card1:not(:checked)~#card2:checked~#card3:checked~#card4:not(:checked)~.error-notification,
+#card1:not(:checked)~#card2:checked~#card3:not(:checked)~#card4:checked~.error-notification,
+#card1:not(:checked)~#card2:checked~#card5:checked~#card6:not(:checked)~.error-notification,
+#card1:not(:checked)~#card2:checked~#card5:not(:checked)~#card6:checked~.error-notification,
+#card1:not(:checked)~#card2:checked~#card7:checked~#card8:not(:checked)~.error-notification,
+#card1:not(:checked)~#card2:checked~#card7:not(:checked)~#card8:checked~.error-notification,
+#card1:not(:checked)~#card2:checked~#card9:checked~#card10:not(:checked)~.error-notification,
+#card1:not(:checked)~#card2:checked~#card9:not(:checked)~#card10:checked~.error-notification,
+#card1:not(:checked)~#card2:checked~#card11:checked~#card12:not(:checked)~.error-notification,
+#card1:not(:checked)~#card2:checked~#card11:not(:checked)~#card12:checked~.error-notification,
+#card1:not(:checked)~#card2:checked~#card13:checked~#card14:not(:checked)~.error-notification,
+#card1:not(:checked)~#card2:checked~#card13:not(:checked)~#card14:checked~.error-notification,
+#card1:not(:checked)~#card2:checked~#card15:checked~#card16:not(:checked)~.error-notification,
+#card1:not(:checked)~#card2:checked~#card15:not(:checked)~#card16:checked~.error-notification,
+
+/* card3 */
+#card1:checked~#card2:not(:checked)~#card3:checked~#card4:not(:checked)~.error-notification,
+#card1:not(:checked)~#card2:checked~#card3:checked~#card4:not(:checked)~.error-notification,
+#card3:checked~#card4:not(:checked)~#card5:checked~#card6:not(:checked)~.error-notification,
+#card3:checked~#card4:not(:checked)~#card5:checked~#card6:not(:checked)~.error-notification,
+#card3:checked~#card4:not(:checked)~#card5:not(:checked)~#card6:checked~.error-notification,
+#card3:checked~#card4:not(:checked)~#card7:checked~#card8:not(:checked)~.error-notification,
+#card3:checked~#card4:not(:checked)~#card7:not(:checked)~#card8:checked~.error-notification,
+#card3:checked~#card4:not(:checked)~#card9:checked~#card10:not(:checked)~.error-notification,
+#card3:checked~#card4:not(:checked)~#card9:not(:checked)~#card10:checked~.error-notification,
+#card3:checked~#card4:not(:checked)~#card11:checked~#card12:not(:checked)~.error-notification,
+#card3:checked~#card4:not(:checked)~#card11:not(:checked)~#card12:checked~.error-notification,
+#card3:checked~#card4:not(:checked)~#card13:checked~#card14:not(:checked)~.error-notification,
+#card3:checked~#card4:not(:checked)~#card13:not(:checked)~#card14:checked~.error-notification,
+#card3:checked~#card4:not(:checked)~#card15:checked~#card16:not(:checked)~.error-notification,
+#card3:checked~#card4:not(:checked)~#card15:not(:checked)~#card16:checked~.error-notification,
+
+/* card4 */
+#card1:checked~#card2:not(:checked)~#card3:not(:checked)~#card4:checked~.error-notification,
+#card1:not(:checked)~#card2:checked~#card3:not(:checked)~#card4:checked~.error-notification,
+#card3:not(:checked)~#card4:checked~#card5:checked~#card6:not(:checked)~.error-notification,
+#card3:not(:checked)~#card4:checked~#card5:not(:checked)~#card6:checked~.error-notification,
+#card3:not(:checked)~#card4:checked~#card7:checked~#card8:not(:checked)~.error-notification,
+#card3:not(:checked)~#card4:checked~#card7:not(:checked)~#card8:checked~.error-notification,
+#card3:not(:checked)~#card4:checked~#card9:checked~#card10:not(:checked)~.error-notification,
+#card3:not(:checked)~#card4:checked~#card9:not(:checked)~#card10:checked~.error-notification,
+#card3:not(:checked)~#card4:checked~#card11:checked~#card12:not(:checked)~.error-notification,
+#card3:not(:checked)~#card4:checked~#card11:not(:checked)~#card12:checked~.error-notification,
+#card3:not(:checked)~#card4:checked~#card13:checked~#card14:not(:checked)~.error-notification,
+#card3:not(:checked)~#card4:checked~#card13:not(:checked)~#card14:checked~.error-notification,
+#card3:not(:checked)~#card4:checked~#card15:checked~#card16:not(:checked)~.error-notification,
+#card3:not(:checked)~#card4:checked~#card15:not(:checked)~#card16:checked~.error-notification,
+
+/* card5 */
+#card1:checked~#card2:not(:checked)~#card5:checked~#card6:not(:checked)~.error-notification,
+#card1:not(:checked)~#card2:checked~#card5:checked~#card6:not(:checked)~.error-notification,
+#card5:checked~#card6:not(:checked)~#card3:checked~#card4:not(:checked)~.error-notification,
+#card5:checked~#card6:not(:checked)~#card3:not(:checked)~#card4:checked~.error-notification,
+#card5:checked~#card6:not(:checked)~#card7:checked~#card8:not(:checked)~.error-notification,
+#card5:checked~#card6:not(:checked)~#card7:not(:checked)~#card8:checked~.error-notification,
+#card5:checked~#card6:not(:checked)~#card9:checked~#card10:not(:checked)~.error-notification,
+#card5:checked~#card6:not(:checked)~#card9:not(:checked)~#card10:checked~.error-notification,
+#card5:checked~#card6:not(:checked)~#card11:checked~#card12:not(:checked)~.error-notification,
+#card5:checked~#card6:not(:checked)~#card11:not(:checked)~#card12:checked~.error-notification,
+#card5:checked~#card6:not(:checked)~#card13:checked~#card14:not(:checked)~.error-notification,
+#card5:checked~#card6:not(:checked)~#card13:not(:checked)~#card14:checked~.error-notification,
+#card5:checked~#card6:not(:checked)~#card15:checked~#card16:not(:checked)~.error-notification,
+#card5:checked~#card6:not(:checked)~#card15:not(:checked)~#card16:checked~.error-notification,
+
+/* card6 */
+#card5:not(:checked)~#card6:checked~#card1:checked~#card2:not(:checked)~.error-notification,
+#card5:not(:checked)~#card6:checked~#card1:not(:checked)~#card2:checked~.error-notification,
+#card5:not(:checked)~#card6:checked~#card3:checked~#card4:not(:checked)~.error-notification,
+#card5:not(:checked)~#card6:checked~#card3:not(:checked)~#card4:checked~.error-notification,
+#card5:not(:checked)~#card6:checked~#card7:checked~#card8:not(:checked)~.error-notification,
+#card5:not(:checked)~#card6:checked~#card7:not(:checked)~#card8:checked~.error-notification,
+#card5:not(:checked)~#card6:checked~#card9:checked~#card10:not(:checked)~.error-notification,
+#card5:not(:checked)~#card6:checked~#card9:not(:checked)~#card10:checked~.error-notification,
+#card5:not(:checked)~#card6:checked~#card11:checked~#card12:not(:checked)~.error-notification,
+#card5:not(:checked)~#card6:checked~#card11:not(:checked)~#card12:checked~.error-notification,
+#card5:not(:checked)~#card6:checked~#card13:checked~#card14:not(:checked)~.error-notification,
+#card5:not(:checked)~#card6:checked~#card13:not(:checked)~#card14:checked~.error-notification,
+#card5:not(:checked)~#card6:checked~#card15:checked~#card16:not(:checked)~.error-notification,
+#card5:not(:checked)~#card6:checked~#card15:not(:checked)~#card16:checked~.error-notification,
+
+/* Card 7*/
+#card1:checked~#card2:not(:checked)~#card7:checked~#card8:not(:checked)~.error-notification,
+#card1:not(:checked)~#card2:checked~#card7:checked~#card8:not(:checked)~.error-notification,
+#card7:checked~#card8:not(:checked)~#card3:checked~#card4:not(:checked)~.error-notification,
+#card7:checked~#card8:not(:checked)~#card3:not(:checked)~#card4:checked~.error-notification,
+#card7:checked~#card8:not(:checked)~#card5:checked~#card6:not(:checked)~.error-notification,
+#card7:checked~#card8:not(:checked)~#card5:not(:checked)~#card6:checked~.error-notification,
+#card7:checked~#card8:not(:checked)~#card9:checked~#card10:not(:checked)~.error-notification,
+#card7:checked~#card8:not(:checked)~#card9:not(:checked)~#card10:checked~.error-notification,
+#card7:checked~#card8:not(:checked)~#card11:checked~#card12:not(:checked)~.error-notification,
+#card7:checked~#card8:not(:checked)~#card11:not(:checked)~#card12:checked~.error-notification,
+#card7:checked~#card8:not(:checked)~#card13:checked~#card14:not(:checked)~.error-notification,
+#card7:checked~#card8:not(:checked)~#card13:not(:checked)~#card14:checked~.error-notification,
+#card7:checked~#card8:not(:checked)~#card15:checked~#card16:not(:checked)~.error-notification,
+#card7:checked~#card8:not(:checked)~#card15:not(:checked)~#card16:checked~.error-notification,
+
+/* card8 */
+#card7:not(:checked)~#card8:checked~#card1:checked~#card2:not(:checked)~.error-notification,
+#card7:not(:checked)~#card8:checked~#card1:not(:checked)~#card2:checked~.error-notification,
+#card7:not(:checked)~#card8:checked~#card3:checked~#card4:not(:checked)~.error-notification,
+#card7:not(:checked)~#card8:checked~#card3:not(:checked)~#card4:checked~.error-notification,
+#card7:not(:checked)~#card8:checked~#card5:checked~#card6:not(:checked)~.error-notification,
+#card7:not(:checked)~#card8:checked~#card5:not(:checked)~#card6:checked~.error-notification,
+#card7:not(:checked)~#card8:checked~#card9:checked~#card10:not(:checked)~.error-notification,
+#card7:not(:checked)~#card8:checked~#card9:not(:checked)~#card10:checked~.error-notification,
+#card7:not(:checked)~#card8:checked~#card11:checked~#card12:not(:checked)~.error-notification,
+#card7:not(:checked)~#card8:checked~#card11:not(:checked)~#card12:checked~.error-notification,
+#card7:not(:checked)~#card8:checked~#card13:checked~#card14:not(:checked)~.error-notification,
+#card7:not(:checked)~#card8:checked~#card13:not(:checked)~#card14:checked~.error-notification,
+#card7:not(:checked)~#card8:checked~#card15:checked~#card16:not(:checked)~.error-notification,
+#card7:not(:checked)~#card8:checked~#card15:not(:checked)~#card16:checked~.error-notification,
+
+/* card9 */
+#card9:checked~#card10:not(:checked)~#card1:checked~#card2:not(:checked)~.error-notification,
+#card9:checked~#card10:not(:checked)~#card1:not(:checked)~#card2:checked~.error-notification,
+#card9:checked~#card10:not(:checked)~#card3:checked~#card4:not(:checked)~.error-notification,
+#card9:checked~#card10:not(:checked)~#card3:not(:checked)~#card4:checked~.error-notification,
+#card9:checked~#card10:not(:checked)~#card5:checked~#card6:not(:checked)~.error-notification,
+#card9:checked~#card10:not(:checked)~#card5:not(:checked)~#card6:checked~.error-notification,
+#card9:checked~#card10:not(:checked)~#card7:checked~#card8:not(:checked)~.error-notification,
+#card9:checked~#card10:not(:checked)~#card7:not(:checked)~#card8:checked~.error-notification,
+#card9:checked~#card10:not(:checked)~#card11:checked~#card12:not(:checked)~.error-notification,
+#card9:checked~#card10:not(:checked)~#card11:not(:checked)~#card12:checked~.error-notification,
+#card9:checked~#card10:not(:checked)~#card13:checked~#card14:not(:checked)~.error-notification,
+#card9:checked~#card10:not(:checked)~#card13:not(:checked)~#card14:checked~.error-notification,
+#card9:checked~#card10:not(:checked)~#card15:checked~#card16:not(:checked)~.error-notification,
+#card9:checked~#card10:not(:checked)~#card15:not(:checked)~#card16:checked~.error-notification,
+
+/* card10 */
+#card9:not(:checked)~#card10:checked~#card1:checked~#card2:not(:checked)~.error-notification,
+#card9:not(:checked)~#card10:checked~#card1:not(:checked)~#card2:checked~.error-notification,
+#card9:not(:checked)~#card10:checked~#card3:checked~#card4:not(:checked)~.error-notification,
+#card9:not(:checked)~#card10:checked~#card3:not(:checked)~#card4:checked~.error-notification,
+#card9:not(:checked)~#card10:checked~#card5:checked~#card6:not(:checked)~.error-notification,
+#card9:not(:checked)~#card10:checked~#card5:not(:checked)~#card6:checked~.error-notification,
+#card9:not(:checked)~#card10:checked~#card7:checked~#card8:not(:checked)~.error-notification,
+#card9:not(:checked)~#card10:checked~#card7:not(:checked)~#card8:checked~.error-notification,
+#card9:not(:checked)~#card10:checked~#card11:checked~#card12:not(:checked)~.error-notification,
+#card9:not(:checked)~#card10:checked~#card11:not(:checked)~#card12:checked~.error-notification,
+#card9:not(:checked)~#card10:checked~#card13:checked~#card14:not(:checked)~.error-notification,
+#card9:not(:checked)~#card10:checked~#card13:not(:checked)~#card14:checked~.error-notification,
+#card9:not(:checked)~#card10:checked~#card15:checked~#card16:not(:checked)~.error-notification,
+#card9:not(:checked)~#card10:checked~#card15:not(:checked)~#card16:checked~.error-notification,
+
+/* card11 */
+#card11:checked~#card12:not(:checked)~#card1:not(:checked)~#card2:checked~.error-notification,
+#card11:checked~#card12:not(:checked)~#card1:checked~#card2:not(:checked)~.error-notification,
+#card11:checked~#card12:not(:checked)~#card3:checked~#card4:not(:checked)~.error-notification,
+#card11:checked~#card12:not(:checked)~#card3:not(:checked)~#card4:checked~.error-notification,
+#card11:checked~#card12:not(:checked)~#card5:checked~#card6:not(:checked)~.error-notification,
+#card11:checked~#card12:not(:checked)~#card5:not(:checked)~#card6:checked~.error-notification,
+#card11:checked~#card12:not(:checked)~#card7:checked~#card8:not(:checked)~.error-notification,
+#card11:checked~#card12:not(:checked)~#card7:not(:checked)~#card8:checked~.error-notification,
+#card11:checked~#card12:not(:checked)~#card9:checked~#card10:not(:checked)~.error-notification,
+#card11:checked~#card12:not(:checked)~#card9:not(:checked)~#card10:checked~.error-notification,
+#card11:checked~#card12:not(:checked)~#card13:checked~#card14:not(:checked)~.error-notification,
+#card11:checked~#card12:not(:checked)~#card13:not(:checked)~#card14:checked~.error-notification,
+#card11:checked~#card12:not(:checked)~#card15:checked~#card16:not(:checked)~.error-notification,
+#card11:checked~#card12:not(:checked)~#card15:not(:checked)~#card16:checked~.error-notification,
+
+/* card12 */
+#card11:not(:checked)~#card12:checked~#card1:checked~#card2:not(:checked)~.error-notification,
+#card11:not(:checked)~#card12:checked~#card1:not(:checked)~#card2:checked~.error-notification,
+#card11:not(:checked)~#card12:checked~#card3:checked~#card4:not(:checked)~.error-notification,
+#card11:not(:checked)~#card12:checked~#card3:not(:checked)~#card4:checked~.error-notification,
+#card11:not(:checked)~#card12:checked~#card5:checked~#card6:not(:checked)~.error-notification,
+#card11:not(:checked)~#card12:checked~#card5:not(:checked)~#card6:checked~.error-notification,
+#card11:not(:checked)~#card12:checked~#card7:checked~#card8:not(:checked)~.error-notification,
+#card11:not(:checked)~#card12:checked~#card7:not(:checked)~#card8:checked~.error-notification,
+#card11:not(:checked)~#card12:checked~#card9:checked~#card10:not(:checked)~.error-notification,
+#card11:not(:checked)~#card12:checked~#card9:not(:checked)~#card10:checked~.error-notification,
+#card11:not(:checked)~#card12:checked~#card13:checked~#card14:not(:checked)~.error-notification,
+#card11:not(:checked)~#card12:checked~#card13:not(:checked)~#card14:checked~.error-notification,
+#card11:not(:checked)~#card12:checked~#card15:checked~#card16:not(:checked)~.error-notification,
+#card11:not(:checked)~#card12:checked~#card15:not(:checked)~#card16:checked~.error-notification,
+
+/* card13 */
+#card13:checked~#card14:not(:checked)~#card1:checked~#card2:not(:checked)~.error-notification,
+#card13:checked~#card14:not(:checked)~#card1:not(:checked)~#card2:checked~.error-notification,
+#card13:checked~#card14:not(:checked)~#card3:checked~#card4:not(:checked)~.error-notification,
+#card13:checked~#card14:not(:checked)~#card3:not(:checked)~#card4:checked~.error-notification,
+#card13:checked~#card14:not(:checked)~#card5:checked~#card6:not(:checked)~.error-notification,
+#card13:checked~#card14:not(:checked)~#card5:not(:checked)~#card6:checked~.error-notification,
+#card13:checked~#card14:not(:checked)~#card7:checked~#card8:not(:checked)~.error-notification,
+#card13:checked~#card14:not(:checked)~#card7:not(:checked)~#card8:checked~.error-notification,
+#card13:checked~#card14:not(:checked)~#card9:checked~#card10:not(:checked)~.error-notification,
+#card13:checked~#card14:not(:checked)~#card9:not(:checked)~#card10:checked~.error-notification,
+#card13:checked~#card14:not(:checked)~#card11:checked~#card12:not(:checked)~.error-notification,
+#card13:checked~#card14:not(:checked)~#card11:not(:checked)~#card12:checked~.error-notification,
+#card13:checked~#card14:not(:checked)~#card15:checked~#card16:not(:checked)~.error-notification,
+#card13:checked~#card14:not(:checked)~#card15:not(:checked)~#card16:checked~.error-notification,
+
+/* card14 */
+#card13:not(:checked)~#card14:checked~#card1:checked~#card2:not(:checked)~.error-notification,
+#card13:not(:checked)~#card14:checked~#card1:not(:checked)~#card2:checked~.error-notification,
+#card13:not(:checked)~#card14:checked~#card3:checked~#card4:not(:checked)~.error-notification,
+#card13:not(:checked)~#card14:checked~#card3:not(:checked)~#card4:checked~.error-notification,
+#card13:not(:checked)~#card14:checked~#card5:checked~#card6:not(:checked)~.error-notification,
+#card13:not(:checked)~#card14:checked~#card5:not(:checked)~#card6:checked~.error-notification,
+#card13:not(:checked)~#card14:checked~#card7:checked~#card8:not(:checked)~.error-notification,
+#card13:not(:checked)~#card14:checked~#card7:not(:checked)~#card8:checked~.error-notification,
+#card13:not(:checked)~#card14:checked~#card9:checked~#card10:not(:checked)~.error-notification,
+#card13:not(:checked)~#card14:checked~#card9:not(:checked)~#card10:checked~.error-notification,
+#card13:not(:checked)~#card14:checked~#card11:checked~#card12:not(:checked)~.error-notification,
+#card13:not(:checked)~#card14:checked~#card11:not(:checked)~#card12:checked~.error-notification,
+#card13:not(:checked)~#card14:checked~#card15:checked~#card16:not(:checked)~.error-notification,
+#card13:not(:checked)~#card14:checked~#card15:not(:checked)~#card16:checked~.error-notification,
+
+/* card15 */
+#card15:checked~#card16:not(:checked)~#card1:checked~#card2:not(:checked)~.error-notification,
+#card15:checked~#card16:not(:checked)~#card1:not(:checked)~#card2:checked~.error-notification,
+#card15:checked~#card16:not(:checked)~#card3:checked~#card4:not(:checked)~.error-notification,
+#card15:checked~#card16:not(:checked)~#card3:not(:checked)~#card4:checked~.error-notification,
+#card15:checked~#card16:not(:checked)~#card5:checked~#card6:not(:checked)~.error-notification,
+#card15:checked~#card16:not(:checked)~#card5:not(:checked)~#card6:checked~.error-notification,
+#card15:checked~#card16:not(:checked)~#card7:checked~#card8:not(:checked)~.error-notification,
+#card15:checked~#card16:not(:checked)~#card7:not(:checked)~#card8:checked~.error-notification,
+#card15:checked~#card16:not(:checked)~#card9:checked~#card10:not(:checked)~.error-notification,
+#card15:checked~#card16:not(:checked)~#card9:not(:checked)~#card10:checked~.error-notification,
+#card15:checked~#card16:not(:checked)~#card11:checked~#card12:not(:checked)~.error-notification,
+#card15:checked~#card16:not(:checked)~#card11:not(:checked)~#card12:checked~.error-notification,
+#card15:checked~#card16:not(:checked)~#card13:checked~#card14:not(:checked)~.error-notification,
+#card15:checked~#card16:not(:checked)~#card13:not(:checked)~#card14:checked~.error-notification,
+
+/* card16 */
+#card15:not(:checked)~#card16:checked~#card1:checked~#card2:not(:checked)~.error-notification,
+#card15:not(:checked)~#card16:checked~#card1:not(:checked)~#card2:checked~.error-notification,
+#card15:not(:checked)~#card16:checked~#card3:checked~#card4:not(:checked)~.error-notification,
+#card15:not(:checked)~#card16:checked~#card3:not(:checked)~#card4:checked~.error-notification,
+#card15:not(:checked)~#card16:checked~#card5:checked~#card6:not(:checked)~.error-notification,
+#card15:not(:checked)~#card16:checked~#card5:not(:checked)~#card6:checked~.error-notification,
+#card15:not(:checked)~#card16:checked~#card7:checked~#card8:not(:checked)~.error-notification,
+#card15:not(:checked)~#card16:checked~#card7:not(:checked)~#card8:checked~.error-notification,
+#card15:not(:checked)~#card16:checked~#card9:checked~#card10:not(:checked)~.error-notification,
+#card15:not(:checked)~#card16:checked~#card9:not(:checked)~#card10:checked~.error-notification,
+#card15:not(:checked)~#card16:checked~#card11:checked~#card12:not(:checked)~.error-notification,
+#card15:not(:checked)~#card16:checked~#card11:not(:checked)~#card12:checked~.error-notification,
+#card15:not(:checked)~#card16:checked~#card13:checked~#card14:not(:checked)~.error-notification,
+#card15:not(:checked)~#card16:checked~#card13:not(:checked)~#card14:checked~.error-notification {
+  display: flex;
+  position: fixed;
+}
+
+/*---------YOU WIN-----------*/
+
+/* Overlay style */
+.you-win {
+  visibility: hidden;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+}
+
+.you-win p {
+  color: white;
+  font-size: 2em;
+  margin-bottom: 2rem;
+}
+
+.you-win-button {
+  background: #fff;
+  color: #776878;
+  font-size: 20px;
+  padding: 20px 40px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/*Implementa un hover al botn*/
+
+.you-win-button:hover {
+  background: rgb(253, 234, 255);
+}
+
+.you-win-button a {
+  color: #ae81a8;
+  text-decoration: none;
+}
+
+/* Muestra el overlay cuando todos los checkboxes están marcados */
+#card1:checked+#card2:checked+#card3:checked+#card4:checked+#card5:checked+#card6:checked+#card7:checked+#card8:checked+#card9:checked+#card10:checked+#card11:checked+#card12:checked+#card13:checked+#card14:checked+#card15:checked+#card16:checked~.you-win {
+  visibility: visible;
+  display: flex;
+  /* Esto hará que el overlay sea visible y se muestre */
+}

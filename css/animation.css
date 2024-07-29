@@ -1,0 +1,55 @@
+@import url("settings.css");
+
+#card1:checked~.boxes .selector1,
+#card2:checked~.boxes .selector2,
+#card3:checked~.boxes .selector3,
+#card4:checked~.boxes .selector4,
+#card5:checked~.boxes .selector5,
+#card6:checked~.boxes .selector6,
+#card7:checked~.boxes .selector7,
+#card8:checked~.boxes .selector8,
+#card9:checked~.boxes .selector9,
+#card10:checked~.boxes .selector10,
+#card11:checked~.boxes .selector11,
+#card12:checked~.boxes .selector12,
+#card13:checked~.boxes .selector13,
+#card14:checked~.boxes .selector14,
+#card15:checked~.boxes .selector15,
+#card16:checked~.boxes .selector16 {
+  transform: rotateY(180deg);
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+  /* Parametro de la transicion */
+  transform-style: preserve-3d;
+}
+
+
+.Cardfront,
+.Cardback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.Cardfront {
+  background-color: #1D2039;
+  color: #fff;
+}
+
+.Cardback {
+  background-color: var(--mainColor);
+  display: flex;
+  justify-content: center;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  /* Sirve para ocultar la capa trasera para que no se interponga con la visibilidad de la capa delantera */
+  align-items: center;
+  padding: 8px;
+}

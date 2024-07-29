@@ -1,0 +1,253 @@
+.boxes {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 50px;
+    animation: changeState 1s; /* Duración total de 8 segundos */
+    animation-iteration-count: infinite;   
+    padding: 10%;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#check:checked ~ .boxes {
+    animation-play-state: paused;
+}
+
+@keyframes changeState {
+    0%, 3.33% {
+      grid-template-areas: 
+        "selector1 selector3 selector5 selector6"
+        "selector2 selector4 selector10 selector11"
+        "selector12 selector13 selector15 selector16"
+        "selector7 selector8 selector9 selector14";
+    }
+    3.34%, 6.67% {
+      grid-template-areas: 
+        "selector3 selector1 selector5 selector14"
+        "selector7 selector4 selector10 selector11"
+        "selector12 selector11 selector13 selector16"
+        "selector2 selector8 selector9 selector6";
+    }
+    6.68%, 10% {
+      grid-template-areas: 
+        "selector14 selector7 selector8 selector6"
+        "selector2 selector4 selector10 selector11"
+        "selector16 selector13 selector15 selector12"
+        "selector3 selector5 selector9 selector1";
+    }
+    10.01%, 13.33% {
+      grid-template-areas: 
+        "selector5 selector3 selector9 selector1"
+        "selector2 selector4 selector10 selector11"
+        "selector12 selector13 selector15 selector16"
+        "selector7 selector8 selector6 selector14";
+    }
+    13.34%, 16.67% {
+      grid-template-areas: 
+        "selector7 selector8 selector9 selector14"
+        "selector1 selector3 selector5 selector6"
+        "selector2 selector4 selector10 selector11"
+        "selector12 selector13 selector15 selector16";
+    }
+    16.68%, 20% {
+      grid-template-areas: 
+        "selector12 selector13 selector15 selector16"
+        "selector2 selector4 selector10 selector11"
+        "selector3 selector5 selector9 selector1"
+        "selector7 selector8 selector6 selector14";
+    }
+    20.01%, 23.33% {
+      grid-template-areas: 
+        "selector3 selector5 selector9 selector1"
+        "selector7 selector8 selector6 selector14"
+        "selector12 selector13 selector15 selector16"
+        "selector2 selector4 selector10 selector11";
+    }
+    23.34%, 26.67% {
+      grid-template-areas: 
+        "selector2 selector8 selector9 selector6"
+        "selector12 selector13 selector15 selector16"
+        "selector7 selector1 selector5 selector14"
+        "selector3 selector4 selector10 selector11";
+    }
+    26.68%, 30% {
+      grid-template-areas: 
+        "selector3 selector5 selector9 selector1"
+        "selector7 selector8 selector6 selector14"
+        "selector12 selector13 selector15 selector16"
+        "selector2 selector4 selector10 selector11";
+    }
+    30.01%, 33.33% {
+      grid-template-areas: 
+        "selector1 selector3 selector5 selector6"
+        "selector2 selector4 selector10 selector11"
+        "selector12 selector13 selector15 selector16"
+        "selector7 selector8 selector9 selector14";
+    }
+    33.34%, 36.67% {
+      grid-template-areas: 
+        "selector6 selector9 selector11 selector14"
+        "selector3 selector2 selector8 selector5"
+        "selector1 selector10 selector15 selector7"
+        "selector4 selector12 selector13 selector16";
+    }
+    36.68%, 40% {
+      grid-template-areas: 
+        "selector1 selector7 selector11 selector16"
+        "selector3 selector6 selector9 selector12"
+        "selector2 selector4 selector10 selector14"
+        "selector5 selector8 selector13 selector15";
+    }
+    40.01%, 43.33% {
+      grid-template-areas: 
+        "selector8 selector2 selector14 selector7"
+        "selector10 selector11 selector3 selector16"
+        "selector12 selector5 selector6 selector9"
+        "selector1 selector4 selector13 selector15";
+    }
+    43.34%, 46.67% {
+      grid-template-areas: 
+        "selector2 selector3 selector5 selector6"
+        "selector4 selector7 selector9 selector1"
+        "selector8 selector10 selector11 selector13"
+        "selector12 selector14 selector15 selector16";
+    }
+    46.68%, 50% {
+      grid-template-areas: 
+        "selector9 selector6 selector13 selector12"
+        "selector5 selector1 selector8 selector14"
+        "selector10 selector2 selector3 selector7"
+        "selector11 selector4 selector15 selector16";
+    }
+    50.01%, 53.33% {
+      grid-template-areas: 
+        "selector1 selector2 selector4 selector6"
+        "selector3 selector5 selector7 selector9"
+        "selector8 selector10 selector11 selector12"
+        "selector13 selector14 selector15 selector16";
+    }
+    53.34%, 56.67% {
+      grid-template-areas: 
+        "selector16 selector15 selector14 selector13"
+        "selector12 selector11 selector10 selector9"
+        "selector8 selector7 selector6 selector5"
+        "selector4 selector3 selector2 selector1";
+    }
+    56.68%, 60% {
+      grid-template-areas: 
+        "selector1 selector4 selector7 selector10"
+        "selector2 selector5 selector8 selector11"
+        "selector3 selector6 selector9 selector12"
+        "selector13 selector14 selector15 selector16";
+    }
+    60.01%, 63.33% {
+      grid-template-areas: 
+        "selector8 selector2 selector14 selector7"
+        "selector10 selector11 selector3 selector16"
+        "selector12 selector5 selector6 selector9"
+        "selector1 selector4 selector13 selector15";
+    }
+    63.34%, 66.67% {
+      grid-template-areas: 
+        "selector3 selector5 selector9 selector1"
+        "selector7 selector8 selector6 selector14"
+        "selector12 selector13 selector15 selector16"
+        "selector2 selector4 selector10 selector11";
+    }
+    66.68%, 70% {
+      grid-template-areas: 
+        "selector6 selector9 selector11 selector14"
+        "selector3 selector2 selector8 selector5"
+        "selector1 selector10 selector15 selector7"
+        "selector4 selector12 selector13 selector16";
+    }
+    70.01%, 73.33% {
+      grid-template-areas: 
+        "selector1 selector7 selector11 selector16"
+        "selector3 selector6 selector9 selector12"
+        "selector2 selector4 selector10 selector14"
+        "selector5 selector8 selector13 selector15";
+    }
+    73.34%, 76.67% {
+      grid-template-areas: 
+        "selector14 selector13 selector12 selector11"
+        "selector10 selector9 selector8 selector7"
+        "selector6 selector5 selector4 selector3"
+        "selector2 selector1 selector16 selector15";
+    }
+    76.68%, 80% {
+      grid-template-areas: 
+        "selector15 selector10 selector6 selector1"
+        "selector11 selector7 selector2 selector16"
+        "selector8 selector3 selector14 selector5"
+        "selector9 selector4 selector13 selector12";
+    }
+    80.01%, 83.33% {
+      grid-template-areas: 
+        "selector3 selector5 selector7 selector9"
+        "selector1 selector2 selector4 selector6"
+        "selector8 selector10 selector11 selector12"
+        "selector13 selector14 selector15 selector16";
+    }
+    83.34%, 86.67% {
+      grid-template-areas: 
+        "selector16 selector15 selector14 selector13"
+        "selector12 selector11 selector10 selector9"
+        "selector8 selector7 selector6 selector5"
+        "selector4 selector3 selector2 selector1";
+    }
+    86.68%, 90% {
+      grid-template-areas: 
+        "selector1 selector4 selector7 selector10"
+        "selector2 selector5 selector8 selector11"
+        "selector3 selector6 selector9 selector12"
+        "selector13 selector14 selector15 selector16";
+    }
+    90.01%, 93.33% {
+      grid-template-areas: 
+        "selector8 selector2 selector14 selector7"
+        "selector10 selector11 selector3 selector16"
+        "selector12 selector5 selector6 selector9"
+        "selector1 selector4 selector13 selector15";
+    }
+    93.34%, 96.67% {
+      grid-template-areas: 
+        "selector3 selector5 selector9 selector1"
+        "selector7 selector8 selector6 selector14"
+        "selector12 selector13 selector15 selector16"
+        "selector2 selector4 selector10 selector11";
+    }
+    96.68%, 100% {
+      grid-template-areas: 
+        "selector6 selector9 selector11 selector14"
+        "selector3 selector2 selector8 selector5"
+        "selector1 selector10 selector15 selector7"
+        "selector4 selector12 selector13 selector16";
+    }
+  }
+  
+  
+  .selector1 { grid-area: selector1; }
+  .selector2 { grid-area: selector2; }
+  .selector3 { grid-area: selector3; }
+  .selector4 { grid-area: selector4; }
+  .selector5 { grid-area: selector5; }
+  .selector6 { grid-area: selector6; }
+  .selector7 { grid-area: selector7; }
+  .selector8 { grid-area: selector8; }
+  .selector9 { grid-area: selector9; }
+  .selector10 { grid-area: selector10; }
+  .selector11 { grid-area: selector11; }
+  .selector12 { grid-area: selector12; }
+  .selector13 { grid-area: selector13; }
+  .selector14 { grid-area: selector14; }
+  .selector15 { grid-area: selector15; }
+  .selector16 { grid-area: selector16; }
